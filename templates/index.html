@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iris Classification</h1>
+    <div class="container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label for="">Parameter 1</label> <br>
+            <input type="text" name="p1"><br><br>
+            <label for="">Parameter 2</label> <br>
+            <input type="text" name="p2"><br><br>
+            <label for="">Parameter 3</label> <br>
+            <input type="text" name="p3"><br><br>
+            <label for="">Parameter 4</label> <br>
+            <input type="text" name="p4"><br><br>
+            <input type="submit" name="predict" value="predict">
+        </form>
+        <p>Type: {{ pred }}</p>
+    </div>
+</body>
+</html>
